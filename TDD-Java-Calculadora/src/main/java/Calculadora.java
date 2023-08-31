@@ -17,4 +17,13 @@ public class Calculadora {
 
         return resultado;
     }
+    public double raizQuadrada1(double numero) {
+    return Math.sqrt(numero);
+}
+    public double raizQuadrada(double numero) {
+    if (numero < 0) {
+        throw new IllegalArgumentException("Não é possível calcular a raiz de um número negativo");
+    }
+    return Math.sqrt(numero);
+	}
 }
