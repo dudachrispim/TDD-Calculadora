@@ -2,6 +2,7 @@ package test.java;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 public class CalculadoraTest {
 	@Test
@@ -38,4 +39,25 @@ public class CalculadoraTest {
         int resultado3 = calculadora.potencia(base3, expoente3);
         assertEquals(16, resultado3);
     }
+	@Test
+public void testRaizQuadrada() {
+    Calculator calculator = new Calculator();
+    double result = calculator.raizQuadrada(16.0);
+    assertEquals(4.0, result, 0.0001);
+	}
+
+@Test
+public void testRaizQuadradaNumeroNegativo() {
+    Calculator calculator = new Calculator();
+    assertThrows(IllegalArgumentException.class, () -> {
+        calculator.raizQuadrada(-4.0);
+    });
+}
+
+@Test
+public void testRaizQuadradaNumeroDecimal() {
+    Calculator calculator = new Calculator();
+    double result = calculator.raizQuadrada(2.25);
+    assertEquals(1.5, result, 0.0001);
+	}
 }
