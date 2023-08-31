@@ -9,4 +9,10 @@ public class CalculadoraTest {
         Calculadora calc = new Calculadora();
         assertEquals(30, calc.multiplicacao(5, 6));
     }
+
+	@Test
+    public void testDiviso(){
+      Calculadora calc = new Calculadora();
+        assertEquals(20, calc.divisao(100,5));
+    }
 }
