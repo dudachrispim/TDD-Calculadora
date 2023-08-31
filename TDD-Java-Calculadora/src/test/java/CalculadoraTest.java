@@ -60,4 +60,15 @@ public void testRaizQuadradaNumeroDecimal() {
     double result = calculator.raizQuadrada(2.25);
     assertEquals(1.5, result, 0.0001);
 	}
+
+	@Test
+    public void shouldBeAbleToSubtractTwoNumbers() throws Exception {
+        int a = 10;
+        int b = 5;
+
+        Calculadora calculadora = new Calculadora();
+        int sub = calculadora.sub(a, b);
+
+        assertEquals(5, sub);
+    }
 }
