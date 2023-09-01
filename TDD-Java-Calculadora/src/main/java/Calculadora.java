@@ -1,4 +1,8 @@
 public class Calculadora {
+
+    public int multiplicacao(int a, int b) {
+        return a * b;
+    }
     public int sub(int a, int b) {
         return a - b;
     }
